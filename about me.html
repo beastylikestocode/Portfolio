@@ -12,11 +12,21 @@
             color: #006B38FF;
         }
 
+        @keyframes popup {
+            from{
+                opacity: 0%;
+            }
+            to{
+                opacity: 100%;
+            }
+        }
+
         .para{
             background: #101820FF;
             color: #006B38FF;
             font-size: 30px;
             font-weight: bold;
+            animation: popup 1s forwards;
             
         }
 
@@ -28,6 +38,7 @@
             transform: translateX(-50%) translateY(-50%);
             width: 800px;
             display: inline-block;
+            animation: popup 1s forwards;
 
         }
         
@@ -43,11 +54,15 @@
             right: 3%;
             transition: color 0.15s;
             font-family: Arial, Helvetica, sans-serif;
+            transition: color 0.15s, scale 0.15s;
+            animation: popup 1s forwards;
+            
         }
         
         .home:hover{
             cursor: pointer;
             color: rgba(0, 107, 55, 0.699);
+            scale: 105%;
         }
         
         

@@ -19,6 +19,15 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        @keyframes popup {
+            from{
+                opacity: 0%;
+            }
+            to{
+                opacity: 100%;
+            }
+        }
+
         .links{
             position: absolute; 
             top: 50%;
@@ -27,6 +36,7 @@
             border: #006B38FF;
             width: 500px;
             height: 300px;
+            animation: popup 1s forwards;
 
         }
 
@@ -42,11 +52,14 @@
             right: 3%;
             transition: color 0.15s;
             font-family: Arial, Helvetica, sans-serif;
+            transition: color 0.15s, scale 0.15s;
+            animation: popup 1s forwards;
         }
         
         .home:hover{
             cursor: pointer;
             color: rgba(0, 107, 55, 0.699);
+            scale: 105%;
         }
 
         .insta{
@@ -57,6 +70,7 @@
           font-size: 50px;
           position: absolute;
           left: 25%;
+          animation: popup 1s forwards;
         }
 
         .insta:hover{
@@ -73,6 +87,8 @@
           position: absolute;
           top: 17%;
           left: 25%;
+          transition: color 0.15s;
+          animation: popup 1s forwards;
         }
 
         .gmail:hover{
@@ -89,6 +105,8 @@
           position: absolute;
           top: 34%;
           left: 25%;
+          transform: color 0.15s;
+          animation: popup 1s forwards;
         }
 
         .yt:hover{
@@ -116,6 +134,7 @@
           position: absolute;
           top: 32%;
           left: 36%;
+          animation: popup 1s forwards;
         }
 
         .hub:hover{
@@ -133,6 +152,7 @@
           position: absolute;
           top: 50%;
           left: 25%;
+          animation: popup 1s forwards;
         }
 
         .disc:hover{

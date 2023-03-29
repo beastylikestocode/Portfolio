@@ -15,6 +15,7 @@ body
 h1
 {
   font-size: 5em;
+  opacity: 0%;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -25,6 +26,29 @@ h1
   left: 48%; 
   transform: translateX(-50%) translateY(-50%);
   cursor: default;
+  animation: popup 1s forwards;
+}
+
+@keyframes dropdown {
+  from{
+    transform: translateY(0px);
+    opacity: 0%;
+  }
+  
+  to{
+    transform: translateY(25px);
+    opacity: 100%;
+  }
+}
+
+@keyframes popup {
+  from{
+    opacity: 0%;
+  }
+
+  to{
+    opacity: 100%;
+  }
 }
 
 
@@ -55,13 +79,15 @@ h1
   position: absolute;
   top: 3%;
   right: 8.1%;
-  transition: color 0.15s;
+  transition: color 0.15s, scale 0.15s;
+  animation: popup 1s forwards;
 }
 
 .about-me:hover
 {
   cursor: pointer;
   color: rgba(0, 107, 55, 0.699);
+  scale: 105%;
 }
 
 
@@ -75,7 +101,8 @@ h1
   position: absolute;
   top: 3%;
   right: 2%;
-  transition: color 0.15s;
+  transition: color 0.15s, scale 0.15s;
+  animation: popup 1s forwards;
             
 }
 
@@ -83,6 +110,8 @@ h1
 {
   cursor: pointer;
   color: rgba(0, 107, 55, 0.699);
+  scale: 105%;
+  
 }
 
         
@@ -97,13 +126,15 @@ h1
   position: absolute;
   top: 3%;
   right: 15%;
-  transition: color 0.15s;
+  transition: color 0.15s, scale 0.15s;
+  animation: popup 1s forwards;
 
 }
 
 .contact:hover{
   cursor: pointer;
    color: rgba(0, 107, 55, 0.699); 
+  scale: 105%;
 }
 
 
